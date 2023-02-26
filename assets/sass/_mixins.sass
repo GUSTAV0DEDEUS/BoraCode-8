@@ -1,0 +1,18 @@
+@mixin flex($flex-direction, $justify-content, $align-items, $gap)
+  display: flex
+  flex-direction: $flex-direction
+  justify-content: $justify-content
+  align-items: $align-items
+  gap: $gap
+
+@mixin font($font-weight, $font-size, $color)
+  font-weight: $font-weight
+  font-size: $font-size
+  color: $color
+
+@mixin responsive-note()
+  @media (max-width: 1156px) 
+    @content
+@mixin responsive-mobal()
+  @media (max-width: 600px) 
+    @content

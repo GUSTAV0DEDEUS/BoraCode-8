@@ -1,0 +1,188 @@
+// %card-min-width
+// %card-medium-width
+// %card-max-width
+  
+@mixin card ()
+  height: 100%
+  width: 100%
+  
+  background: variables.$cards-color
+  box-sizing: variables.$cards-shadow
+  border-radius: 1.6rem
+  
+  padding: 2.9rem 4.8rem
+  
+  @include flex($flex-direction: column, $justify-content: space-between, $align-items: center , $gap: 3.2rem)
+  
+  .title
+    @include font($font-weight: 600, $font-size: 2.4rem, $color: variables.$neutral-white)
+  .status
+    display: grid
+    place-items: center
+    row-gap: 1.6rem
+    @include font($font-weight: 600, $font-size: 2.4rem, $color: variables.$green-sucess)
+  #pink
+    background: variables.$pink-gradient
+  .circle
+    position: relative
+    width: 197px
+    height: 197px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .progress
+      position: absolute
+    .left
+      left: 10px       
+    .inner
+      text-align: center
+      .title
+        @include font($font-weight: 600, $font-size: 3.4rem, $color: variables.$neutral-white)
+        line-height: 100%
+      .medium
+        @include font($font-weight: 400, $font-size: 1.6rem, $color: variables.$neutral-white)
+
+  .content
+    display: flex
+    gap: 2rem
+    .text
+      display: flex
+      justify-content: center
+      gap: .4rem
+      .ball
+        display: inline-block
+        width: 1.5rem
+        height: 1.5rem
+        background: #4A4556
+        border-radius: 50%
+      #purple
+        background: variables.$purple-gradient 
+      #pink
+        background: variables.$pink-gradient 
+        
+      
+  .content .text,
+  .text
+    @include font($font-weight: 500, $font-size: 1.4rem, $color: variables.$neutral-white)
+    position: relative
+    span
+      @include font($font-weight: 400, $font-size: 1.4rem, $color: variables.$neutral-white)
+      margin-left: .6rem
+
+@mixin container()
+  width: 100%
+  background: variables.$cards-color
+  box-shadow: variables.$cards-shadow
+  border-radius: 1.6rem
+  padding: 2.9rem 4.8rem
+  display: flex
+  flex-direction: column
+  gap: 3.2rem
+  
+  .title
+    @include font($font-weight: 600, $font-size: 2.4rem, $color: variables.$neutral-white)
+    @include responsive-mobal
+      line-height: 160%
+  .box
+    display: flex
+    height: 100%
+    justify-content: space-between
+    @media (min-height: 720px) 
+      align-items: center
+    @include responsive-mobal
+        flex-direction: column
+        gap: 1rem
+        align-items: start
+    .text
+      display: flex
+      flex-direction: column
+      justify-content: center
+      row-gap: 3.2rem
+      text-align: left
+      .content
+        .p
+          @include font($font-weight: 500, $font-size: 1.4rem, $color: variables.$neutral-white)
+          line-height: 160%
+        .medium
+          @include font($font-weight: 500, $font-size: 2.4rem, $color: variables.$neutral-white)
+          line-height: 160%
+    .table
+      height: 100%
+      display: flex
+      gap: 5.9rem
+      align-items: flex-end
+      position: relative
+      @media (min-height: 720px) 
+      height: 183px   
+      @include responsive-note
+        gap: 5.9rem
+        height: 187px
+      @include responsive-mobal
+        gap: 0
+        justify-content: space-between
+        height: 187px
+        width: 100%
+
+      .tcolumn 
+        display: flex
+        flex-direction: column
+        gap: 5px
+        align-items: center
+        justify-content: flex-end
+        height: 100%
+      
+        &:nth-child(2)
+          .tline
+            height: 20%
+        &:nth-child(3)
+          .tline
+            height: 60%
+        &:nth-child(4)
+          .tline
+            height: 40%
+        &:nth-child(5)
+          .tline
+            height: 100%
+        &:nth-child(6)
+          .tline
+            height: 75%
+        &:nth-child(7)
+          .tline
+            height: 65%
+        &:nth-child(8)
+          .tline
+            height: 38%
+           
+        
+        .tline
+          width: 15px
+          opacity: 0
+          background: variables.$blue-gradient
+          border-radius: 99px
+          z-index: 9999            
+          
+        .text
+          @include font($font-weight: 500, $font-size: 1.4rem, $color: variables.$neutral-white)
+
+      .line
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: calc( 100% + 10px )
+        height: 3px
+        background: #4A4556
+        border-radius: 99px
+
+@for $i from 1 through 8
+        .tcolumn:nth-child(#{$i})
+          .tline
+            animation: 1s fate calc(3s + #{$i}s) forwards linear
+        
+@keyframes fate
+  from       
+    height: 0
+    
+  to
+    opacity: 1
+    height: inital

@@ -14,6 +14,7 @@
     - <a href="#stacks"> Stacks</a>
     - <a href="#stacks"> Cores</a>
     - <a href="#wakatime"> Distribuição do Tempo</a>
+    - <a href="#page"> PageSpeed Insights</a>
   - <a href="#melhorias"> Melhorias</a>
   - <a href="#destaque">Destaque para alguns códigos</a>
 
@@ -120,6 +121,11 @@
 | # | 10 mins		| assets/sass/_mixins.sass |
 |total: | 7 hrs 10mins | Visual Code|
 
+<h3 id="page">PageSpeed Insights</h3>
+Dados do computador<br>
+<img  src=".github/pc.jpg" ><br>
+Avalização para dispositivos movéis<br>
+<img  src=".github/mobile.jpg">
 <h2 id="melhorias"> Melhorias ao Projeto</h2>
 
 - Acrecentar funcionalidades a dashboard

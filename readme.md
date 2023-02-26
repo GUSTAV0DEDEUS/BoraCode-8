@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
 </div>
-<a href="https://gustav0dedeus.github.io/BoraCode-8/"><img  src="f" width="100%"></a>
+<a href="https://gustav0dedeus.github.io/BoraCode-8/"><img  src="./.github/gif.gif" width="100%"></a>
 
 
 ## Documentação
